@@ -2,6 +2,8 @@ package com.javaneversleep.tankwar;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class GameClient  extends JComponent {
 
@@ -22,6 +24,17 @@ public class GameClient  extends JComponent {
         frame.add(client);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//退出程序
         frame.setLocationRelativeTo(null);
+        frame.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyReleased(e);
+            }
+        });
         frame.pack();
         frame.setVisible(true);
 
